@@ -1,0 +1,101 @@
+::-webkit-scrollbar {
+width:0;
+}
+
+body{
+display: flex;
+flex-direction: column;
+}
+
+.custom_card3{
+background-color: rgb(36, 117, 52);
+width: 27%;
+height: 50%;
+border-radius: 7px;
+}
+
+.custom_card2 {
+background-color: rgb(75, 84, 197);
+    
+    width: 30%;
+    height: 80%;
+    border-radius: 7px;
+    
+}
+
+.custom_card {
+    /* border: 1px solid red; */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: rgb(230, 228, 137); */
+    background-color: rgb(157, 255, 171);
+    /* border: 1px solid black; */
+   
+
+}
+
+.card {
+    /* border: 1px solid #000; */
+    width: 25%;
+    height: 50%;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0);
+  
+}
+
+.icon {
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG  */
+
+.fas {
+    font-size: 5rem;
+    transition: all 0.4s;
+}
+
+.back{
+    background-color: rgba(127, 127, 127, 0.324);
+}
+
+.text{
+
+    font-family:monospace;
+    font-size: 20px;
+
+}
+
+.back2{
+
+    background-color: rgba(127, 127, 127, 0.324);
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .custom_card {
+        flex-direction: column;
+    }
+    .card {
+        border: 1px solid #000;
+        width: 100%;
+        height: 80%;
+        margin: 8px 0px;
+    }
+    .fas {
+        font-size: 3rem;
+    }
+    .cus-foot{
+        display: none !important;
+    }
+
+}
+

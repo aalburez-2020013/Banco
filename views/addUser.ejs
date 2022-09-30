@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./components/headTag') -%>
+</head>
+<body class="back">
+    <%- include('./components/navbar') -%>
+
+    
+      
+
+        <div class="container mt-2">
+          <a href="./home.html" class="btn btn-success fw-bold ">&larr; Back</a>
+      </div>
+
+<div class="container mt-5">
+
+     <% if(msg !="" ){%>
+      <div class="alert alert-success text-center " role="alert" id="addMsg">
+
+          <%=msg %>
+      </div>
+
+
+      <%} %>
+
+  <div class="container mt-5 bg-success text-center text-light fw-30 p-2">
+    <h3>Agregar Cliente</h3>
+  </div>
+<form action="/adduser" method="POST" >
+    <div class="form-group mt-3">
+      <label for="exampleInputEmail1" class="text">Nombre</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userName" placeholder="Escribe un nombre" required>
+     
+    </div>
+    <div class="form-group  mt-3">
+      <label for="exampleInputEmail1" class="text">Usuario</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="usuarioNombre" placeholder="Escribe un usuario">
+     
+    </div>
+    <div class="form-group  mt-3">
+      <label for="exampleInputEmail1" class="text">Numero de Cuenta</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="numeroCuenta" placeholder="general numero de Cuenta">
+     
+    </div>
+    <div class="form-group  mt-3">
+      <label for="exampleInputPassword1" class="text">DPI</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" name="dpiNumber" placeholder="Agregue DPI">
+      
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1" class="text">Direccion</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="direccion" name="address" placeholder="Escribe su Direccion" required>
+       
+      </div>
+
+      <div class="form-group  mt-3">
+        <label for="exampleInputEmail1" class="text">Numero de Telefono</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="NumeroTel" placeholder="Escribe numero de Telefono">
+       
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1" class="text">Correo</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="correo" name="email" placeholder="Escriba su Correo" required>
+       
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1" class="text">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="password" name="password" placeholder="Escriba su Contraseña" required>
+       
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1" class="text">Nombre de Trabajo</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="workName" name="workName" placeholder="Escriba su lugar de trabajo" required>
+       
+      </div>
+
+      <div class="form-group  mt-3">
+        <label for="exampleInputEmail1" class="text">Ingresos Mensuales</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="ingresosMensuales" placeholder="Escribe tus ingresos mensuales">
+       
+      </div>
+
+    </div>
+    <div class="form-group  mt-3">
+        <label for="exampleInputEmail1" class="text">Amount</label>
+        <input type="Amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userAmount" placeholder="Enter Amount">
+
+    <button type="submit" class="btn btn-success mt-3 text-center">Submit</button>
+  </form>
+</div>
+
+    <%- include('./components/bootstrapScript') -%>
+    <script>
+        let alert = document.getElementById('addMsg');
+    setTimeout(() => {
+        alert.style.visibility = "hidden"
+    }, 2000)
+    </script>
+</body>
+</html>
